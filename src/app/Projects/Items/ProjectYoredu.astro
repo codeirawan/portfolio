@@ -1,0 +1,192 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import ButtonLiveProduction from "../../../components/ButtonLiveProduction/ButtonLiveProduction.astro";
+import IconMysql from "../Icons/IconMysql.astro";
+import IconLaravel from "../Icons/IconLaravel.astro";
+import IconYoredu from "../Icons/IconYoredu.astro";
+import ProjectSlider from "../ProjectSlider.astro";
+---
+
+<article
+  style={{ transform: "perspective(75em) rotateX(18deg)" }}
+  id="project-natanya"
+  class="relative z-10 mx-auto max-w-[1244px] overflow-hidden py-20 sm:rounded-3xl"
+>
+  <!-- Outnament Lines (Top) -->
+  <Image
+    format="webp"
+    src="/images/project-ournament-lines.png"
+    width="1000"
+    height="1000"
+    loading="lazy"
+    alt=""
+    class="pointer-events-none absolute left-0 top-0 z-0 min-w-[600px] sm:min-w-[1000px]"
+  />
+
+  <!-- Outnament Lines (Bottom) -->
+  <Image
+    format="webp"
+    src="/images/project-ournament-lines-btm.png"
+    loading="lazy"
+    width="1000"
+    height="1000"
+    alt=""
+    class="pointer-events-none absolute bottom-0 right-0 z-0 min-w-[500px] sm:min-w-[1000px]"
+  />
+
+  <div class="relative z-10 px-5 sm:px-10 lg:px-16">
+    <h3 class="sr-only">Yoredu</h3>
+    <IconYoredu />
+
+    <h4 class="sr-only">About Yoredu</h4>
+
+    <p class="mt-10 text-lg !leading-150 text-dark sm:text-2xl">
+      <span class="font-semibold">Introducing Yoredu: Unleash Your Learning Potential</span> - in a world that never stops
+      evolving, staying ahead means embracing the power of knowledge. Yoredu is not just a web app; it's your passport to
+      a universe of learning, an invitation to embark on an educational odyssey unlike any other.
+    </p>
+  </div>
+
+  <div class="portfolio-images">
+    <ProjectSlider
+      project="yoredu"
+      images={Array.from({ length: 59 }, (_, i) => ({
+        url: `/images/projects/yoredu/@yoredu${i + 1}.png`,
+        alt: "Yoredu",
+      }))}
+    />
+  </div>
+
+  <div class="relative z-10 px-5 sm:px-10 lg:px-16">
+    <p class="text-lg !leading-150 text-dark sm:text-2xl">
+      Yoredu is your digital ally, your partner in growth, and your gateway to the boundless realm of online learning.
+      With an extensive array of courses spanning diverse domains, Yoredu connects you to visionary instructors and
+      captivating content. Our sleek interface and cutting-edge features redefine how you experience education, making
+      it seamless, enjoyable, and extraordinarily effective.
+      <br />
+      <br />
+      Whether you're a student chasing dreams, a professional aiming for the stars, or simply a curious soul seeking new
+      horizons, Yoredu is your compass to navigate the ever-expanding galaxy of knowledge. Prepare to break barriers, shatter
+      limits, and redefine what's possible. Join us as we usher in a new era of personalized learning with Yoredu, where
+      your unique journey to self-improvement awaits.
+    </p>
+
+    <!-- <div class="mb-10 mt-10 sm:mb-14 sm:mt-[4.4rem]">
+      <ButtonLiveProduction name="yoredu.vercel.app" link="https://yoredu.vercel.app" />
+    </div>
+
+    <div class="flex items-start space-x-4 pl-5 sm:space-x-10 sm:pl-8">
+      <a target="_blank" href="https://github.com/codeirawan/yoredu" class="font-semibold leading-6 tracking-tight">
+        <span class="block text-xl leading-4 text-dark sm:text-[32px] sm:!leading-100">yoredu</span>
+        <span class="inline-flex space-x-[6px] text-sm text-slate-700 sm:pt-2 sm:text-xl">
+          <span>on</span>
+          <span
+            ><svg class="w-[18px] sm:h-6 sm:w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_67_250)">
+                <path
+                  d="M12.5 0.297119C5.87 0.297119 0.5 5.67012 0.5 12.2971C0.5 17.6001 3.938 22.0971 8.705 23.6821C9.305 23.7951 9.525 23.4241 9.525 23.1051C9.525 22.8201 9.515 22.0651 9.51 21.0651C6.172 21.7891 5.468 19.4551 5.468 19.4551C4.922 18.0701 4.133 17.7001 4.133 17.7001C3.046 16.9561 4.217 16.9711 4.217 16.9711C5.422 17.0551 6.055 18.2071 6.055 18.2071C7.125 20.0421 8.864 19.5121 9.55 19.2051C9.658 18.4291 9.967 17.9001 10.31 17.6001C7.645 17.3001 4.844 16.2681 4.844 11.6701C4.844 10.3601 5.309 9.29012 6.079 8.45012C5.944 8.14712 5.539 6.92712 6.184 5.27412C6.184 5.27412 7.189 4.95212 9.484 6.50412C10.444 6.23712 11.464 6.10512 12.484 6.09912C13.504 6.10512 14.524 6.23712 15.484 6.50412C17.764 4.95212 18.769 5.27412 18.769 5.27412C19.414 6.92712 19.009 8.14712 18.889 8.45012C19.654 9.29012 20.119 10.3601 20.119 11.6701C20.119 16.2801 17.314 17.2951 14.644 17.5901C15.064 17.9501 15.454 18.6861 15.454 19.8101C15.454 21.4161 15.439 22.7061 15.439 23.0961C15.439 23.4111 15.649 23.7861 16.264 23.6661C21.065 22.0921 24.5 17.5921 24.5 12.2971C24.5 5.67012 19.127 0.297119 12.5 0.297119"
+                  fill="#334155"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_67_250">
+                  <rect width="24" height="24" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </span>
+          <span>github.com</span>
+        </span>
+      </a>
+
+      <a
+        href="https://drive.google.com/drive/folders/1NWRQ425NzGOXr5nf81t30kC9Yc-J5muA?usp=sharing"
+        target="_blank"
+        class="inline-flex items-center space-x-2 font-semibold leading-6 tracking-tight sm:space-x-3"
+      >
+        <div class="hidden rounded-lg border-[1px] border-slate-500 border-opacity-50 p-1 sm:inline-block sm:p-2.5">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12.649 20.427h-0.126l-0.061 0.109-3.245 5.675h14.773l0.061-0.109 3.246-5.674h-0.373zM20.573 19.075l0.062 0.108h0.126l6.536-0.028-0.187-0.322-7.199-12.471-0.126 0-6.537 0.027 0.187 0.322zM15.445 12.789l-0.063-0.109-3.292-5.646-0.186 0.322-7.201 12.47 0.064 0.109 3.292 5.648 0.186-0.323 7.138-12.363z"
+              fill="#64748B"></path>
+          </svg>
+        </div>
+
+        <div>
+          <span class="block text-xl leading-4 text-dark sm:text-[32px] sm:!leading-100">full story</span>
+          <span class="inline-flex space-x-[6px] text-sm text-slate-700 sm:mt-1 sm:text-xl"
+            >+ more video demonstration</span
+          >
+        </div>
+      </a>
+    </div>
+
+    <div class="mt-20">
+      <h4 class="text-2xl font-semibold leading-140 text-dark sm:text-[32px]">Featured technologies used</h4>
+      <div class="-ml-2 mt-6 flex flex-wrap gap-3 sm:ml-0">
+        {
+          [<IconLaravel />, <IconMysql />].map((icon) => (
+            <div class="-ml-2 w-20 scale-[90%] sm:ml-0 sm:min-h-[100px] sm:min-w-[100px] sm:scale-100">{icon}</div>
+          ))
+        }
+      </div>
+    </div> -->
+
+    <div class="mt-14"></div>
+  </div>
+</article>
+
+<style>
+  article {
+    background: linear-gradient(146.63deg, rgba(2, 132, 199, 0.1) 1.32%, rgba(236, 254, 255, 0) 66%),
+      linear-gradient(325.76deg, rgba(2, 132, 199, 0.2) 3.68%, rgba(236, 254, 255, 0) 66.89%), #ffffff;
+    box-shadow: "15px24px17pxrgba(0,0,0,0.01),7px11px13pxrgba(0,0,0,0.02),2px3px7pxrgba(0,0,0,0.02),0px0px0pxrgba(0,0,0,0.02)";
+  }
+
+  @media (max-width: 640px) {
+    article {
+      background: linear-gradient(90deg, rgba(2, 132, 199, 0.1) 0%, rgba(236, 254, 255, 0) 66.89%);
+    }
+  }
+
+  article::before {
+    --something: 2px !important;
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: var(--something);
+    opacity: var(--something-opa);
+    background: linear-gradient(
+        135deg,
+        #0285c7aa 5%,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      ),
+      linear-gradient(300deg, #0284c7 10%, transparent, transparent, transparent, transparent, transparent);
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    border-radius: inherit;
+    -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  @media (max-width: 640px) {
+    article::before {
+      padding: 0;
+      padding-top: 2px !important;
+      background: linear-gradient(90deg, #0284c7 0%, #ffffff 66.89%);
+    }
+  }
+</style>

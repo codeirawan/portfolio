@@ -1,0 +1,232 @@
+---
+import { Image } from "@astrojs/image/components";
+
+import ButtonLiveProduction from "../../../components/ButtonLiveProduction/ButtonLiveProduction.astro";
+import IconYortime from "../Icons/IconYortime.astro";
+import ProjectSlider from "../ProjectSlider.astro";
+import IconLaravel from "../Icons/IconLaravel.astro";
+import IconMysql from "../Icons/IconMysql.astro";
+---
+
+<article
+  style={{ transform: "perspective(75em) rotateX(18deg)" }}
+  id="project-natatoko"
+  class="relative z-10 mx-auto max-w-[1244px] overflow-hidden py-20 sm:rounded-3xl"
+>
+  <!-- Outnament Lines (Top) -->
+  <Image
+    format="webp"
+    src="/images/project-ournament-lines.png"
+    width="1000"
+    height="1000"
+    loading="lazy"
+    alt=""
+    class="pointer-events-none absolute left-0 top-0 z-0 min-w-[600px] sm:min-w-[1000px]"
+  />
+
+  <!-- Outnament Lines (Bottom) -->
+  <Image
+    format="webp"
+    src="/images/project-ournament-lines-btm-red.png"
+    loading="lazy"
+    width="1000"
+    height="1000"
+    alt=""
+    class="pointer-events-none absolute bottom-0 right-0 z-0 min-w-[500px] sm:min-w-[1000px]"
+  />
+
+  <div class="relative z-10 px-5 sm:px-10 lg:px-16">
+    <h3 class="sr-only">Natatoko</h3>
+
+    <IconYortime />
+
+    <h4 class="sr-only">Yortime - Your Ultimate Workforce Management Companion</h4>
+
+    <p class="mt-10 text-lg !leading-150 text-dark sm:text-2xl">
+      <strong class="font-semibold"
+        >Introducing Yortime, your go-to workforce management (WFM) app designed to simplify and optimize your
+        workforce-related tasks.
+      </strong>
+      Whether you're a small startup, a mid-sized company, or a large enterprise, Yortime is here to make managing your workforce
+      efficient and hassle-free.
+    </p>
+
+     <h4 class="text-2xl font-semibold leading-140 text-dark sm:text-[32px] mt-5">Key Features of Yortime:</h4>
+    <ol class="text-lg !leading-150 text-dark sm:text-2xl">
+      <li>
+        <strong>Seamless Scheduling:</strong>
+        <ul>
+          <li>- Create, manage, and share forecasting & schedules effortlessly.</li>
+          <li>- Intelligent shift allocation based on employee availability and skills.</li>
+          <li>- Say goodbye to scheduling conflicts.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Precise Time and Attendance:</strong>
+        <ul>
+          <li>- Accurate tracking of employee working hours.</li>
+          <li>- Streamlined clock-in and clock-out processes.</li>
+          <li>- Generate detailed attendance reports for payroll and compliance.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Leave and Absence Management:</strong>
+        <ul>
+          <li>- Simplify leave requests and approvals.</li>
+          <li>- Keep track of employee vacations, sick leave, and other absences.</li>
+          <li>- Ensure compliance with labor laws and company policies.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Performance Insights:</strong>
+        <ul>
+          <li>- Real-time analytics dashboard for workforce performance.</li>
+          <li>- Monitor productivity, attendance, and efficiency.</li>
+          <li>- Identify trends and areas for improvement.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Mobile Accessibility:</strong>
+        <ul>
+          <li>- Access Yortime on-the-go, anytime, and from any device.</li>
+          <li>- Employees can view schedules, request time off, and clock in/out using their smartphones.</li>
+          <li>- Managers can make real-time adjustments and approvals wherever they are.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Seamless Integration:</strong>
+        <ul>
+          <li>- Yortime easily integrates with your existing HR and payroll systems.</li>
+          <li>- Import and export data effortlessly, ensuring data consistency and accuracy.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="portfolio-images">
+    <ProjectSlider
+      project="yortime"
+      images={Array.from({ length: 13 }, (_, i) => ({
+        url: `/images/projects/yortime/@yortime${i + 1}.png`,
+        alt: "Yortime",
+      }))}
+    />
+  </div>
+
+  <div class="relative z-10 px-5 sm:px-10 lg:px-16">
+    <h4 class="text-2xl font-semibold leading-140 text-dark sm:text-[32px] mt-5">Benefits of Yortime:</h4>
+    <ul class="text-lg !leading-150 text-dark sm:text-2xl">
+      <li>
+        <strong>Enhanced Efficiency:</strong>
+        <ul>
+          <li>- Automate repetitive tasks, such as scheduling and attendance tracking.</li>
+          <li>- Free up valuable time for HR professionals and managers to focus on strategic initiatives.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Cost Savings:</strong>
+        <ul>
+          <li>- Reduce labor costs by optimizing shift assignments and minimizing overtime.</li>
+          <li>- Minimize errors in payroll calculations and compliance issues.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Happy Employees:</strong>
+        <ul>
+          <li>- Empower employees with self-service options for scheduling and leave requests.</li>
+          <li>- Promote fair and transparent scheduling practices, improving job satisfaction.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Informed Decision-Making:</strong>
+        <ul>
+          <li>- Access real-time analytics and insights to make data-driven workforce decisions.</li>
+          <li>- Adjust staffing levels based on historical data and current demand.</li>
+        </ul>
+      </li>
+    </ul>
+    <h4 class="text-2xl font-semibold leading-140 text-dark sm:text-[32px] mt-5">Conclusion:</h4>
+    <p class="text-lg !leading-150 text-dark sm:text-2xl">
+      Yortime is your all-in-one solution for workforce management. Simplify complex processes, improve efficiency, and
+      gain valuable insights to stay competitive in today's business environment. Say goodbye to scheduling headaches
+      and payroll errors—experience the future of workforce management with Yortime today!
+    </p>
+
+    <!-- <div class="mb-10 mt-10 sm:mb-14 sm:mt-[4.4rem]">
+      <ButtonLiveProduction name="yortime.vercel.app" link="https://yortime.vercel.app" />
+    </div>
+
+   <div class="mt-20">
+      <h4 class="text-2xl font-semibold leading-140 text-dark sm:text-[32px]">Featured technologies used</h4>
+      <div class="-ml-2 mt-6 flex flex-wrap gap-3 sm:ml-0">
+        {
+          [<IconLaravel />, <IconMysql />].map((icon) => (
+            <div class="-ml-2 w-20 scale-[90%] sm:ml-0 sm:min-h-[100px] sm:min-w-[100px] sm:scale-100">{icon}</div>
+          ))
+        }
+      </div>
+    </div> -->
+
+    <div class="mt-14"></div>
+  </div>
+</article>
+
+<style>
+  article {
+    background: linear-gradient(142.21deg, rgba(231, 80, 117, 0.1) -0.37%, rgba(236, 254, 255, 0) 66.76%),
+      linear-gradient(318.59deg, rgba(232, 85, 121, 0.2) 3.78%, rgba(236, 254, 255, 0) 47.39%), #ffffff;
+    box-shadow: 15px 24px 17px rgba(0, 0, 0, 0.01), 7px 11px 13px rgba(0, 0, 0, 0.02), 2px 3px 7px rgba(0, 0, 0, 0.02),
+      0px 0px 0px rgba(0, 0, 0, 0.02);
+  }
+
+  @media (max-width: 640px) {
+    article {
+      background: linear-gradient(90deg, rgba(231, 80, 117, 0.1) 0%, #ffffff 66.89%);
+    }
+  }
+
+  article::before {
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(
+        135deg,
+        hsla(345, 76%, 62%, 0.4) 5%,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      ),
+      linear-gradient(
+        300deg,
+        hsla(345, 76%, 62%, 0.8) 10%,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      );
+    content: "";
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    border-radius: inherit;
+    -webkit-mask: linear-gradient(black, black) content-box content-box, linear-gradient(black, black);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  @media (max-width: 640px) {
+    article::before {
+      padding: 0;
+      padding-top: 2px;
+      background: linear-gradient(90deg, rgba(231, 80, 117, 0.8) 0%, #ffffff 66.89%);
+    }
+  }
+</style>
