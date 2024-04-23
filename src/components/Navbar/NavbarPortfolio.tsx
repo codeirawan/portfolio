@@ -8,7 +8,7 @@ import "./navbar.css";
 
 const navigation = [
   { name: "Projects", href: "#projects" },
-  { name: "Work Experiences", href: "#work-experiences" },
+  // { name: "Work Experiences", href: "#work-experiences" },
   { name: "Latest Writings", href: "#latest-writings" },
   { name: "Contact Me", href: "#contact-me" },
   { name: "✨ Blog", href: "/blog" },
